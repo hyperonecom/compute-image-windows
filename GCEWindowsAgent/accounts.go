@@ -199,7 +199,7 @@ func printCreds(creds *credsJSON) error {
 	if err != nil {
 		return err
 	}
-	return writeSerial("COM4", append(data, []byte("\n")...))
+	return writeSerial("COM2", append(data, []byte("\n")...))
 }
 
 var badReg []string
