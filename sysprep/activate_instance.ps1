@@ -22,7 +22,7 @@
 Set-StrictMode -Version Latest
 
 # Default Values
-$script:kms_server = 'kms.windows.googlecloud.com'
+$script:kms_server = 'kms.windows.hyperone.cloud'
 $script:kms_server_port = 1688
 
 try {
