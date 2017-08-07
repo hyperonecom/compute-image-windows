@@ -65,11 +65,6 @@ function Change-InstanceName {
 
   Write-Log 'Getting hostname from metadata server.'
 
-  if ((Get-CimInstance Win32_BIOS).Manufacturer -cne 'Google') {
-    Write-Log 'Not running in a Google Compute Engine VM.' -error
-    return
-  }
-
   $count = 1
   do {
     $hostname_parts = (Get-Metadata -property 'hostname') -split '\.'
