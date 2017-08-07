@@ -22,7 +22,7 @@ import (
 	"time"
 )
 
-const metadataServer = "http://metadata.google.internal/computeMetadata/v1"
+const metadataServer = "http://169.254.169.254/computeMetadata/v1"
 const metadataHang = "/?recursive=true&alt=json&wait_for_change=true&timeout_sec=60&last_etag="
 const defaultEtag = "NONE"
 

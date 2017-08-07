@@ -39,7 +39,7 @@ import (
 )
 
 var (
-	metadataURL    = "http://metadata.google.internal/computeMetadata/v1/instance/attributes"
+	metadataURL    = "http://169.254.169.254/computeMetadata/v1/instance/attributes"
 	metadataHang   = "/?recursive=true&alt=json&timeout_sec=10&last_etag=NONE"
 	defaultTimeout = 20 * time.Second
 	commands       = []string{"specialize", "startup", "shutdown"}
