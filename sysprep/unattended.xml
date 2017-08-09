@@ -43,14 +43,7 @@
             </OOBE>
             <!-- Setting timezone to GMT -->
             <ShowWindowsLive>false</ShowWindowsLive>
-            <TimeZone>Greenwich Standard Time</TimeZone>
-            <!--Setting OEM information -->
-            <OEMInformation>
-                <Manufacturer>Google Cloud Platform</Manufacturer>
-                <Model>Google Compute Engine Virtual Machine</Model>
-                <SupportURL>https://support.google.com/enterprisehelp/answer/142244?hl=en#cloud</SupportURL>
-                <Logo>C:\Program Files\Google Compute Engine\sysprep\gcp.bmp</Logo>
-            </OEMInformation>
+            <TimeZone>Central European Standard Time</TimeZone>
         </component>
     </settings>
 </unattend>
