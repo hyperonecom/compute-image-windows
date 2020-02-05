@@ -70,7 +70,7 @@ function Activate-Instance {
   # Check if the product can be activated.
   $reg_query = 'HKLM:\Software\Microsoft\Windows NT\CurrentVersion'
   $get_product_details = (Get-ItemProperty -Path $reg_query -Name ProductName).ProductName
-  $known_editions_regex = 'Windows (Web )?Server (2008 R2|2012|2012 R2|2016)'
+  $known_editions_regex = 'Windows (Web )?Server (2008 R2|2012|2012 R2|2016|2019)'
   if ($get_product_details -notmatch $known_editions_regex) {
     Write-Output ("$get_product_details activations are currently not " +
         'supported on GCE. Activation request will be skipped.')
@@ -196,6 +196,12 @@ function Get-ProductKmsClientKey {
     }
     'Windows Server 2016 Datacenter' {
       $license_key = 'CB7KF-BWN84-R7R2Y-793K2-8XDDG'
+    }
+    'Windows Server 2019 Standard' {
+      $license_key = 'N69G4-B89J2-4G8F4-WWYCC-J464C'
+    }
+    'Windows Server 2019 Datacenter' {
+      $license_key = 'WMDGN-G9PQG-XVVXX-R3X43-63DFG'
     }
     # Default
     default {
